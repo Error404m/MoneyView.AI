@@ -1,4 +1,4 @@
-# Smart Finance Insights Platform 💰🤖
+# MoneyView.AI
 
 MoneyView.AI is a personal finance platform that automatically fetches bank and credit card statements, processes them, and provides an AI chatbot for financial insights.
 
@@ -7,6 +7,9 @@ MoneyView.AI is a personal finance platform that automatically fetches bank and 
 * Chatbot: PDFs → chunks → Milvus vector DB → embeddings → AI answers.
 * Infra: Docker + K8s (replicas), HAProxy, Kong Gateway, Load Balancer for scaling & rate limiting.
 * Monitoring: Opentelemetry for end to end API tracing, Prometheus & Grafana for Infra Monitoring, Langsmith for LLM Monitoring
+
+  ![Welcome](https://raw.githubusercontent.com/Error404m/MoneyView.AI/img/1.png)
+
 
 ---
 
