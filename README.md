@@ -2,11 +2,11 @@
 
 MoneyView.AI is a personal finance platform that automatically fetches bank and credit card statements, processes them, and provides an AI chatbot for financial insights.
 
-Built with Next.js + FastAPI, integrates LLaMA & Qwen for AI Q&A.
-Auto-fetches & unlocks bank/credit card statements, processes via OCR, shows dues & spends on UI.
-Chatbot: PDFs → chunks → Milvus vector DB → embeddings → AI answers.
-Infra: Docker + K8s (replicas), HAProxy, Kong Gateway, Load Balancer for scaling & rate limiting.
-Monitoring: Opentelemetry for end to end API tracing, Prometheus & Grafana for Infra Monitoring, Langsmith for LLM Monitoring
+* Built with Next.js + FastAPI, integrates LLaMA & Qwen for AI Q&A.
+* Auto-fetches & unlocks bank/credit card statements, processes via OCR, shows dues & spends on UI.
+* Chatbot: PDFs → chunks → Milvus vector DB → embeddings → AI answers.
+* Infra: Docker + K8s (replicas), HAProxy, Kong Gateway, Load Balancer for scaling & rate limiting.
+* Monitoring: Opentelemetry for end to end API tracing, Prometheus & Grafana for Infra Monitoring, Langsmith for LLM Monitoring
 
 ---
 
