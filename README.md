@@ -8,7 +8,7 @@ MoneyView.AI is a personal finance platform that automatically fetches bank and 
 * Infra: Docker + K8s (replicas), HAProxy, Kong Gateway, Load Balancer for scaling & rate limiting.
 * Monitoring: Opentelemetry for end to end API tracing, Prometheus & Grafana for Infra Monitoring, Langsmith for LLM Monitoring
 
-  ![Welcome](https://raw.githubusercontent.com/Error404m/MoneyView.AI/img/1.png)
+  ![Welcome](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/1.png)
 
 
 ---
