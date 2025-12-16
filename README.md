@@ -8,8 +8,32 @@ MoneyView.AI is a personal finance platform that automatically fetches bank and 
 * Infra: Docker + K8s (replicas), HAProxy, Kong Gateway, Load Balancer for scaling & rate limiting.
 * Monitoring: Opentelemetry for end to end API tracing, Prometheus & Grafana for Infra Monitoring, Langsmith for LLM Monitoring
 
-  ![Welcome](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/1.png)
+  ![Dash](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/1.png)
 
+
+---
+
+## DEMO
+* Users log in securely with Google Authentication.
+* Once logged in, the platform automatically fetches bank and credit card statements directly from Gmail attachments.
+* It can also unlock password-protected PDFs with common passwords, then process them using OCR to extract data.
+  ![Home](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/5.png)
+
+### Dashboard
+Shows account balance, dues, and categorized spends from uploaded/auto-fetched statements.
+  ![Dash](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/1.png)
+
+### AI Chatbot
+
+An integrated chatbot lets users interact with their financial data using natural language.
+
+* PDFs → split into chunks
+* Stored as embeddings in Milvus Vector DB
+* Query → embeddings → LLM (LLaMA/Qwen) → contextual answer.
+
+
+Ask questions like “What is my IndianOil HDFC bank total due, minimum due, and due date for this month?” → answers with context from your statements.
+  ![chat](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/3.png)
 
 ---
 
