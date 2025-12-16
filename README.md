@@ -33,7 +33,17 @@ An integrated chatbot lets users interact with their financial data using natura
 
 
 Ask questions like “What is my IndianOil HDFC bank total due, minimum due, and due date for this month?” → answers with context from your statements.
+  ![chat](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/2.png)
+
+> Query: What is the minimum amount I have to pay this month?
   ![chat](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/3.png)
+
+> Query: How much did I spend on Flipkart shopping this month?
+  ![chat](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/4.png)
+
+
+
+
 
 ---
 
