@@ -8,78 +8,87 @@ MoneyView.AI is a personal finance platform that automatically fetches bank and 
 * Infra: Docker + K8s (replicas), HAProxy, Kong Gateway, Load Balancer for scaling & rate limiting.
 * Monitoring: Opentelemetry for end to end API tracing, Prometheus & Grafana for Infra Monitoring, Langsmith for LLM Monitoring
 
-  ![Dash](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/1.png)
+---
 
+## Demo
+
+### Secure Authentication
+
+Users sign in using Google Authentication, ensuring a secure and frictionless onboarding experience.
+
+### Automatic Statement Ingestion
+
+After login, the platform automatically retrieves financial statements from Gmail attachments. It supports:
+
+* Bank and credit card statements fetched directly from email
+* Password-protected PDFs unlocked using common password patterns
+* OCR-based extraction for scanned or image-based documents
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/5.png" width="600" />
+</p>
 
 ---
 
-## 🚀 DEMO
+## Dashboard
 
-### 🔐 Secure Login
+The dashboard provides a clear, consolidated view of a user’s financial health.
 
-Users log in seamlessly using **Google Authentication**, ensuring secure and trusted access.
+It displays:
 
-### 📩 Automatic Statement Fetching
+* Current balances and outstanding dues
+* Upcoming payment deadlines and minimum amounts due
+* Categorized spending insights such as shopping, fuel, and utilities
 
-Once logged in, the platform automatically:
+All information is derived automatically from uploaded or fetched statements, requiring no manual input.
 
-* Fetches **bank & credit card statements** directly from **Gmail attachments**
-* Detects and **unlocks password-protected PDFs** using common password patterns
-* Applies **OCR** to extract structured financial data from scanned or image-based PDFs
-
-![Home](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/5.png)
-
----
-
-## 📊 Dashboard
-
-A unified financial overview that gives users instant clarity on their money.
-
-### Key Highlights:
-
-* 💰 **Total account balance & outstanding dues**
-* 📅 **Upcoming due dates & minimum payments**
-* 🧾 **Categorized spending insights** (shopping, fuel, utilities, etc.)
-* 🔄 Data auto-refreshes from uploaded or fetched statements
-
-![Dashboard](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/1.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/1.png" width="600" />
+</p>
 
 ---
 
-## 🤖 AI-Powered Financial Chatbot
+## AI-Powered Financial Chatbot
 
-Interact with your financial data using **natural language queries**.
+The platform includes an intelligent chatbot that allows users to query their financial data in natural language.
 
-### 🔧 How it works:
+### How it works
 
-1. 📄 **PDF statements** are split into semantic chunks
-2. 🧠 Chunks are converted into **embeddings**
-3. 📦 Stored in **Milvus Vector Database**
-4. 🔍 User query → embedding search →
-5. 🤖 Context passed to **LLMs (LLaMA / Qwen)** → precise, grounded response
+* PDF statements are split into meaningful text chunks
+* Each chunk is converted into embeddings
+* Embeddings are stored in a Milvus vector database
+* User queries are embedded and matched against relevant chunks
+* Context is passed to an LLM (LLaMA or Qwen) to generate accurate, grounded responses
 
-### 🗣️ Example Questions You Can Ask:
+### Example Queries
 
-> **“What is my IndianOil HDFC Bank total due, minimum due, and due date for this month?”**
-> → Answers directly from your statement with exact figures and context
+**Question:** What is my IndianOil HDFC Bank total due, minimum due, and due date for this month?
 
-![Chat-1](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/2.png)
+The system retrieves the relevant statement sections and responds with exact figures and supporting context.
 
----
-
-> **Query:** *What is the minimum amount I have to pay this month?*
-
-![Chat-2](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/3.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/2.png" width="600" />
+</p>
 
 ---
 
-> **Query:** *How much did I spend on Flipkart shopping this month?*
+**Question:** What is the minimum amount I have to pay this month?
 
-![Chat-3](https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/4.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/3.png" width="600" />
+</p>
 
 ---
 
-✨ **Result:** A clean, intelligent, and conversational way to understand your finances — no manual tracking, no spreadsheets, just answers.
+**Question:** How much did I spend on Flipkart shopping this month?
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Error404m/MoneyView.AI/main/img/4.png" width="600" />
+</p>
+
+---
+
+This approach allows users to understand and manage their finances through simple questions, eliminating the need to manually review statements or track expenses in spreadsheets.
 
 
 ---
